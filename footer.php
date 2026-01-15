@@ -23,31 +23,21 @@
         menu.classList.toggle('active');
     });
 
-    setTimeout(() => {
-        const overlay = document.getElementById("intro-overlay");
-        if(overlay) {
-            overlay.remove();
-        }
-    }, 3500);
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
+                } else {
+                    // Optional: remove if you want it to animate every time
+                   // entry.target.classList.remove('show');
                 }
             });
-        }, observerOptions);
+        }, {
+            threshold: 0.2 // Trigger when 20% visible
+        });
 
-        const scrollElements = document.querySelectorAll('.scroll-content');
-        scrollElements.forEach(el => observer.observe(el));
-    });
+        const hiddenElements = document.querySelectorAll('.scroll-content, .scroll-content-right');
+        hiddenElements.forEach((el) => observer.observe(el));
  </script>
  </body>
 
