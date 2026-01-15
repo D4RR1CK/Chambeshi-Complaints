@@ -4,6 +4,10 @@
         box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     html, body {
         height: 100%;
     }
@@ -34,7 +38,6 @@
         animation: fadeIn 1.2s ease forwards;
     }
 
-    
     main {
         flex: 1;
     }
@@ -75,15 +78,64 @@
         cursor: pointer;
     }
 
+    .hero-section {
+        height: calc(80vh - 70px);
+        background-color: #8cab8c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+    }
+
+   .scroll-block {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;      /* Changed from flex-start to center */
+    justify-content: flex-start;  /* Added to center horizontally */
+    padding: 60px 10%;        /* Added more vertical padding */
+    overflow: hidden;
+}
+
+.scroll-content{
+    color: #000;
+    max-width: 700px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-out;
+    padding-left: 24px;
+    border-left: 4px solid #2563eb;
+    position: relative;
+}
+
+.scroll-content.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-content h3{
+    font-size: 1.8rem;        
+    line-height: 1.6;
+    color: #1e293b;           
+    font-weight: 700;
+
+}
     .report-section {
         min-height: calc(100vh - 120px); /* full viewport minus header/footer */
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* vertically center the card */
+        justify-content: center; 
         padding: 20px;
-        background-color: #f0f4f8; /* subtle background for contrast */
-    }            /* Center content horizontally */
+        background-color: #f0f4f8;
+    }            
 
     .report-card {
         background: white;

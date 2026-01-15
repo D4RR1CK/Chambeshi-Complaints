@@ -20,7 +20,7 @@
             A Place To Vent Your Hostel Issues.
         </div>
     </div>
-    <header id="header" class="site-header">
+    <header id="header" class="site-header rounded-b-lg">
         <div class="nav-container">
         <div class="logo">
             <!-- static website name -->

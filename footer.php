@@ -26,9 +26,28 @@
     setTimeout(() => {
         const overlay = document.getElementById("intro-overlay");
         if(overlay) {
-            overlay.remove
+            overlay.remove();
         }
     }, 3500);
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const scrollElements = document.querySelectorAll('.scroll-content');
+        scrollElements.forEach(el => observer.observe(el));
+    });
  </script>
  </body>
 
