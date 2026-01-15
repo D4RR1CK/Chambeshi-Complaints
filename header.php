@@ -15,6 +15,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <div id="intro-overlay">
+        <div class="intro-text">
+            A Place To Vent Your Hostel Issues.
+        </div>
+    </div>
     <header id="header" class="site-header">
         <div class="nav-container">
         <div class="logo">

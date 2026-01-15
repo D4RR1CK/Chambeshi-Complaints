@@ -22,6 +22,13 @@
     toggle.addEventListener('click', () => {
         menu.classList.toggle('active');
     });
+
+    setTimeout(() => {
+        const overlay = document.getElementById("intro-overlay");
+        if(overlay) {
+            overlay.remove
+        }
+    }, 3500);
  </script>
  </body>
 
