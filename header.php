@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php 
         //check if the page title exist
         if(isset($pageTitle)) {
@@ -11,7 +12,7 @@
         }
     ?>
     <!-- LINK TO CSS FILE -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
