@@ -46,5 +46,13 @@
     ?>
     <main>
 
+    <script>
+
+        if(sessionStorage.getItem('hasVisited')){
+            document.getElementById('intro-overlay').style.display = 'none';
+        } else {
+            sessionStorage.setItem('hasVisited', 'true');
+        }
+    </script>
 </body>
 </html>
