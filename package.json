@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "tailwindcss": "^4.1.18",
+    "tailwindscss": "^0.3.0"
+  }
+}
